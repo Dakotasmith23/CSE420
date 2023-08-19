@@ -1,0 +1,5 @@
+./server 10 10 &
+sleep 2
+./client 10 inputFile2.txt &
+sleep 2
+./client 10 exitFile.dat

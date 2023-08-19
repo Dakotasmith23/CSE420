@@ -1,0 +1,34 @@
+Notes
+- named semaphores are good for use between multiple processes
+- unnamed semaphores are good for use between multiple threads
+
+
+Client Program
+- sends search requests through the request queue that is in shared memory
+	- parse inputfile line by line and insert each line as a string into the
+	arr[] in requestQueue
+
+
+Server Program
+- must initialize shared memory
+
+
+
+
+
+
+To Do
+- Figure out how to implement request queue in shared memory
+
+
+Questions
+Write down questions here related to things you did in code that might lead to errors/bugs in the future
+
+
+
+
+- circular array queue
+
+- dont write pointers into shared memory
+- dont use strdup in shared memory
+

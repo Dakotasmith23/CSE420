@@ -1,0 +1,15 @@
+1:1:/home/dakota/Desktop/project1 
+2:1:/home/dakota/Desktop/project1/BlackBoxTesting.zip 
+2:2:/home/dakota/Desktop/project1/Makefile 
+2:3:/home/dakota/Desktop/project1/README.txt 
+2:4:/home/dakota/Desktop/project1/anotherTestFolder 
+2:5:/home/dakota/Desktop/project1/dirlist 
+2:6:/home/dakota/Desktop/project1/dirlist.c 
+2:7:/home/dakota/Desktop/project1/dirlist.o 
+2:8:/home/dakota/Desktop/project1/output.txt 
+2:9:/home/dakota/Desktop/project1/questionsForOfficeHours 
+2:10:/home/dakota/Desktop/project1/testFolder1 
+3:1:/home/dakota/Desktop/project1/anotherTestFolder/testFolder2 
+3:2:/home/dakota/Desktop/project1/testFolder1/testFile1 
+4:1:/home/dakota/Desktop/project1/anotherTestFolder/testFolder2/testFile2 
+

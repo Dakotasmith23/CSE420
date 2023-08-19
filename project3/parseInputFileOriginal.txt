@@ -1,0 +1,37 @@
+void parseInputFile(char *inputFile, void **requestQueue, sem_t** empty, sem_t** full, sem_t** mutex, int *index, void *requestQueueBeginning, int REQ_QUEUE_SIZE)
+{
+	// printf("requestQueue value in function before:%p\n", *requestQueue);
+  // printf("address of empty semaphore in pIF: %p\n", *empty);
+ 
+  FILE *file;
+	file = fopen(inputFile, "r");
+	
+
+	char line[MAXLINESIZE];
+
+  // open up the inputFile and get directoryName and keyword
+  // 
+
+	while(!feof(file))
+	{
+	  fgets(line,MAXLINESIZE,file);
+    char *dupLine = strdup(line);
+		producer(requestQueue, dupLine, empty, full, mutex);
+    (*index)++;
+    printf("index now equals: %d\n", *index);
+    
+    if((*index) == (REQ_QUEUE_SIZE))
+    {
+      *index = 0;
+      *requestQueue = requestQueueBeginning;
+      printf("value of requestQueue here is:%p . Should be same as after mapping\n", *requestQueue);
+
+    }
+	}
+	fclose(file);
+
+  
+  // printf("requestQueue value in function after:%p\n",*requestQueue);
+
+
+}

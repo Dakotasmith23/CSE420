@@ -1,0 +1,19 @@
+poe.txt dream
+file1.txt to
+poe2.txt dream
+file2.txt to
+poe3.txt dream
+file3.txt to
+poe4.txt dream
+file4.txt to
+poe5.txt dream
+file5.txt to
+poe6.txt dream
+file6.txt to
+poe7.txt dream
+file7.txt to
+poe8.txt dream
+file8.txt to
+poe9.txt dream
+file9.txt to
+exit

@@ -1,0 +1,15 @@
+when do we need to use free()??
+I thought we were supposed to use it after we use malloc() but in the 
+insert_node() function provided to us it is not used there.
+
+
+Having trouble finding out why my test2 is failing for the blackbox testing.
+
+
+heap is memory that can be used from alloc()
+
+
+FIX:
+ignore files starting with "." (hidden files)
+look at notes
+

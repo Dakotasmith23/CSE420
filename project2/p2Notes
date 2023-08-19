@@ -1,0 +1,5 @@
+For parallel version
+- When do I need to insert the entities into the list?
+- how do i join all threads at the end of main and then assign 
+keyFreq to the corresponding entity?
+- will have to create a struct and initialize it to insert multiple args into pthread_create()

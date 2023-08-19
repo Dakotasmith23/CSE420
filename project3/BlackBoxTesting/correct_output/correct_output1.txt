@@ -1,0 +1,2 @@
+poe.txt:11:Is but a dream within a dream.
+poe.txt:25:But a dream within a dream?

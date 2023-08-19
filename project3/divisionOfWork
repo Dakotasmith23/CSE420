@@ -1,0 +1,28 @@
+Team member 1:
+- Understand semaphores sem-pc.c
+- Understand shared memory (shm-posix-producer.c & shm-posix-consumer.c)
+- Combine 2 & 3 for the client-server communication
+  * your semaphores will be shared between the clients and the server (named semaphores)
+    - read about named semaphores (man sem_overview, man sem_open)
+  * the buffer will be in shared memory
+    - you will design a custom buffer, and a custom location of the "in" variable to be shared by the clients
+      - check what I mean by the "in" variable in Slide 38 of the "Processes" chapter
+    - no need to share the "out" variable as out is only used by the server and there is only one server!
+    - buffer can be designed using only strings as in shm-posix-producer.c & shm-posix-consumer.c example, or you can try storing other types as well, like ints
+    - depending on your buffer design, determine your buffer size and "in" variable location inside shared memory
+      * you will need to consider req-queue-size, MAXDIRPATH, MAXKEYWORD, end of string characters for MAXDIRPATH & MAXKEYWORD, and the number of characters you allocated for the "in" variable
+
+ 
+
+Team member 2:
+- Implement a simple, sequential search (print to the screen)
+- Implement a simple multi-threaded search (print to the screen first - race condition for the terminal might happen, which is fine as the next steps will fix it) 
+- Understand semaphores sem-pc.c
+- Make your search multi-threaded with bounded buffer using sem-pc.c
+  * Design your buffer item for the bounded buffer (think about all information your printer will need to print the final output)
+  * Design your thread parameters struct by thinking about what parameters your worker/printer threads will need! (buffer, semaphores, filepath, keyword)
+- Study the file locking tutorial and run sample code provided there - you can reuse it!
+- Work on your responsive server, which forks a child for each new request
+  * check if the special "exit" request is to break out of infinite waiting - if it is then make sure you wait for all children and deallocate everything
+  * if it is a regular request, not "exit", then pass that request to a child process immediately and receive another request from the buffer
+    - make sure your server does not wait on the child to complete before receiving and assigning the next request to a new child! This would not be a responsive server!!!
